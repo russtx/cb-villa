@@ -1,0 +1,599 @@
+/*!
+	Theme Name: Crystal Beach Villa 2.0
+	Theme URI: http://html5blank.com
+	Description: HTML5 Blank WordPress Theme
+	Version: 1.4.4
+	Author: Russ Berge
+	Author URI: http://toddmotto.com
+	Tags: Blank, HTML5, CSS3
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+/*------------------------------------*\
+   imports
+\*------------------------------------*/
+@import "assets/sass/bourbon/bourbon.scss";
+
+@import "assets/sass/neat/neat.scss";
+
+@import 'mobile-menu.scss';
+
+@import 'variables.scss';
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+html {
+	font-size:62.5%;
+}
+body {
+	font:300 14px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color:#000;
+       
+        //background:red;
+}
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+.clearfix{
+    clear:both;
+}
+img {
+	max-width:100%;
+	vertical-align:bottom;
+        height:auto;
+}
+a {
+	color:#444;
+	text-decoration:none;
+}
+a:hover {
+	color:#444;
+}
+a:focus {
+	outline:0;
+}
+a:hover,
+a:active {
+	outline:0;
+}
+input:focus {
+	outline:0;
+	border:1px solid #04A4CC;
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+/* wrapper */
+.wrapper {
+	max-width:1280px;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+/* header */
+.header {
+    height: 125px;
+}
+/* logo */
+.logo {
+    img{
+        width: 100px;
+        margin: 20px auto 0 auto;
+        display: block;
+    }
+}
+
+/* nav */
+.upper-menu{
+    display:none;
+}
+.lower-menu{
+    display: none;
+}
+
+nav input[type="checkbox"]{
+    display:none;
+}
+
+nav input[type="checkbox"]{
+    display:none;
+}
+nav ul.menu{
+    z-index: 99
+}
+/* sidebar */
+.sidebar {
+
+}
+/* footer */
+.footer {
+    
+    background: #000;
+    height:56px;
+    width:100%;
+    margin-top:20px;
+    .copyright{
+        @include span-columns(12 of 12);
+
+        color:#fff;
+        text-align: center;
+        margin-top:10px;
+    }
+}
+
+/*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+.page-template-default{
+    background: url("./assets/images/slider-2.jpg");
+    background-size: cover;
+    background-position-x: 43%;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.defaultSection{
+    padding:0 2em;
+    background:rgba(0, 0, 0, .8);
+    color:#fff;
+    overflow: hidden;
+    position: relative;
+    z-index: 99;
+}
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	animation:fadeIn ease-in 1;
+ 	animation-fill-mode:forwards;
+ 	animation-duration:1s;
+}
+
+.fade-in.one {
+float: left;
+animation-delay: 1.2s;
+margin-left: 14px;
+}
+ 
+.fade-in.two {
+float: left;
+animation-delay: 2.2s;
+}
+ 
+.fade-in.three {
+float: left;
+animation-delay: 3.2s;
+}
+
+.fade-in.four {
+animation-delay: 4.2s;
+}
+
+.fade-in.five {
+animation-delay: 5.2s;
+}
+.home{
+    .header{
+        height:207px;
+    }
+}
+.homeSectionWrapper{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9a057+0,f17432+47,ea5507+57,f77204+100 */
+    //background: #f9a057; /* Old browsers */
+    //background: -moz-linear-gradient(top,  #f9a057 0%, #f17432 47%, #ea5507 57%, #f77204 100%); /* FF3.6-15 */
+    //background: -webkit-linear-gradient(top,  #f9a057 0%,#f17432 47%,#ea5507 57%,#f77204 100%); /* Chrome10-25,Safari5.1-6 */
+   // background: linear-gradient(to bottom,  #f9a057 0%,#f17432 47%,#ea5507 57%,#f77204 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9a057', endColorstr='#f77204',GradientType=0 ); /* IE6-9 */
+    background:$black;
+    position: relative;
+    z-index: 99;
+}
+.homeSection{
+    @include outer-container();
+    position: relative;
+    z-index: 99;
+    min-height:265px;
+    overflow:hidden;
+    margin-top:76px;
+    margin-bottom: -20px;
+    padding-bottom: 30px;
+    h1{
+        color:#fff;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Courgette', cursive;
+        letter-spacing: 3px;
+    }
+    p{
+        color:#fff;
+        text-align: center;
+        font-family: 'Courgette', cursive;
+    }
+    .banner{
+        @include span-columns(10 of 12);
+        @include shift(1 of 12);
+    }
+    .mapArea{
+        @include span-columns(10 of 12);
+        @include shift(1 of 12);
+        iframe{
+            width: 100%;
+            height: 300px;
+            display: block;
+            margin: 0 auto;
+        }
+
+    }
+} 
+
+ #greenBox{
+        display: block;
+        position: fixed;
+        top:33px;
+        right:-25px;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        background: $green;
+        height: 25px;
+        margin:0 0 0 0;
+        padding:0 0 0 0;
+        h3{
+            position: relative;
+            bottom: 0px;
+            right: 7px;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin: 0 0 0 0;
+            padding: 5px 10px 0 10px;
+        }
+    }
+    #greenBox:hover{
+        background: #fff;
+        h3{
+            color:$green-text;
+        }
+            
+    }
+    #redBox{
+        display: block;
+        position: fixed;
+        top:33px;
+        right:-1px;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        background: $red;
+        height: 25px;
+        margin:0 0 0 0;
+        padding:0 0 0 0;
+        z-index:10;
+        h3{
+            position: relative;
+            bottom: 0px;
+            right: 7px;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin: -27px 0 0 0;
+            padding: 33px 0px 0 13px;
+            width:122px;
+        }
+    }
+    #redBox:hover{
+        background: #fff;
+        h3{
+            color:$red;
+        }
+            
+    }
+    
+/*============= Contact Page ==============*/
+.page-template-contact-page{
+    background:url("./assets/images/slider-1.jpg");
+    background-size: cover;
+    background-position-x: 43%;
+    background-position-y: -55px;
+    background-repeat: no-repeat;
+}
+
+.contactSection{
+    @include outer-container();
+    
+    .contactArea{
+        @include span-columns(10 of 12);
+        @include shift(1 of 12);
+        padding: 15px;
+        overflow: hidden;
+        background:$black;
+        border: solid #fff 1px;
+        border-radius:5px;
+        .gform_wrapper h3.gform_title{
+            color:#fff;
+            text-align: center;
+            text-transform: uppercase;
+        } 
+        .gform_wrapper .top_label .gfield_label{
+            color: #fff;
+            font-size: 14px;
+        }
+        .gform_wrapper .gfield_date_day label, .gform_wrapper .gfield_date_month label,
+        .gform_wrapper .gfield_date_year label, .gform_wrapper .gfield_time_ampm label,
+        .gform_wrapper .gfield_time_hour label, .gform_wrapper .gfield_time_minute label,
+        .gform_wrapper .ginput_complex label, .gform_wrapper .instruction{
+            color:#fff;
+            font-size: 14px;
+        }
+        margin-bottom: 30px;
+    }
+    P, a{
+        color:#fff;
+        font-size: 1em;
+    }
+}
+/*============= amenities Page ==============*/
+
+.page-template-aminities-page{
+    background:url("./assets/images/slider-2.jpg");
+    background-size: cover;
+    background-position-x: 43%;
+    background-position-y: -55px;
+    background-repeat: no-repeat;
+}
+.aminitiesSectionWrapper{
+    background:$black;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    margin-bottom: -21px;
+}
+.aminitiesSection{
+    @include span-columns(10 of 12);
+    @include shift(1 of 12);
+    padding: 15px;
+    overflow: hidden;
+    
+    color:#fff;
+    //border: solid #fff 1px;
+    border-radius:5px;
+    h1, p{
+        color: #fff;
+        text-align: center;
+    }
+    p, li{
+        font-size:14px;
+    }
+        
+}
+/*============= Galleries Page ==============*/
+
+.page-template-gallery-page{
+    background:url("./assets/images/sunset-2.jpg");
+    background-size: contain;
+    //background-position-x: 43%;
+    //background-position-y: -55px;
+    background-repeat: no-repeat;
+    background-color:#000;
+    header{
+        //background:rgba(0, 0, 0, .4);
+    }
+}
+.gallerySection{
+    background:$black;
+    min-height: 370px;
+    overflow: hidden;
+    padding: 10px 15px;
+    margin-top: 115px;
+    h1{
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    p{
+        color:#fff;
+    }
+}
+
+
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+@font-face {
+	font-family:'Font-Name';
+	src:url('fonts/font-name.eot');
+	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
+		url('fonts/font-name.woff') format('woff'),
+		url('fonts/font-name.ttf') format('truetype'),
+		url('fonts/font-name.svg#font-name') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+	margin:5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+a img.alignnone {
+	margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+	background:#FFF;
+	border:1px solid #F0F0F0;
+	max-width:96%;
+	padding:5px 3px 10px;
+	text-align:center;
+}
+.wp-caption.alignnone {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin:5px 0 20px 20px;
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:0 4px 5px;
+}
+.sticky {
+
+}
+.bypostauthor {
+
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}
+/*-----------------------------------------------------------------------------*/
+@import 'responsive.scss';

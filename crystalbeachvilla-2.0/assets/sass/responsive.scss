@@ -1,0 +1,264 @@
+/*-------------------------------------------------------------------------------------------*\
+    RESPONSIVE      min-width:320px iPhone5 Portrait
+\*--------------------------------------------------------------------------------------------*/
+@media only screen and (min-width:320px){
+    
+}
+
+/*-------------------------------------------------------------------------------------------*\
+    RESPONSIVE      min-width:375px iPhone6 Portrait
+\*--------------------------------------------------------------------------------------------*/
+@media only screen and (min-width:375px){
+    .homeSection {
+        h1{
+            font-size: 26px;
+        }
+        p{
+            font-size: 15px;
+        }
+        .mapArea{
+            iframe{
+                height: 360px;
+            }
+        }
+    }  
+    
+}
+
+/*-------------------------------------------------------------------------------------------*\
+    RESPONSIVE      min-width:400px  iPhone6 Plus Portrait
+\*--------------------------------------------------------------------------------------------*/
+@media only screen and (min-width:400px){
+    .homeSection {
+        h1 {
+            font-size: 30px;
+        }
+        .mapArea{
+            iframe{
+                height: 400px;
+            }
+        }
+    }  
+}
+
+/*-------------------------------------------------------------------------------------------*\
+    RESPONSIVE      min-width:568px   iPhone5 Landscape
+\*--------------------------------------------------------------------------------------------*/
+@media only screen and (min-width:568px){
+    .home{
+        .header {
+            height: 83px;
+        }
+    }
+    .fade-in.one{
+        margin-left: 90px;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------*\
+    RESPONSIVE      min-width:660px iPhone6 Landscape
+\*--------------------------------------------------------------------------------------------*/
+@media only screen and (min-width:660px){
+     .home{
+        .header {
+            height: 110px;
+        }
+    }
+    .fade-in.one{
+        margin-left: 135px;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------*\
+    RESPONSIVE      min-width:736px   iPhone6 Plus Landscape
+\*--------------------------------------------------------------------------------------------*/
+@media only screen and (min-width:736px){
+    .home{
+        .header {
+            height: 129px;
+        }
+    }
+    .fade-in.one{
+        margin-left: 175px;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------*\
+    RESPONSIVE      min-width:768px iPad Portrait
+\*--------------------------------------------------------------------------------------------*/
+@media only screen and (min-width:768px){
+    .home{
+        .header {
+            height: 433px;
+        }
+    }
+    nav{
+        ul.menu{
+            list-style-type: none;
+            border-top: solid 1px $solid-gray;
+            display: flex;
+            justify-content: space-around;
+            margin: 7px 0 0 0;
+            padding: 10px 0 0 0;
+            position:relative;
+            top:465px;
+            background:$trans-white;
+            li{
+                float: left;
+                text-transform: uppercase;
+                color:$solid-gray;
+                color: #7c7b7c;
+                font-size: 15px;
+                font-weight: 600;
+            }
+             ul{
+                display:none;
+                position: absolute;
+                //top:30px;
+                background:$trans-white;
+                z-index:9999;
+
+                li{
+                    display:block;
+                    float:none;
+                    width:180px;
+                    a,visited{
+                        padding: 10px 15px;
+                    }
+                }
+            }
+        }
+    }
+    .nav li.current-menu-item>a, .nav li a:hover {
+        color: $red;
+    }
+    .homeSection{
+        min-height: 850px;
+        margin-top: 71px;
+        h1{
+            font-size:40px;
+        }
+        .fade-in.one {
+            margin-left: 140px;
+        }
+        p {
+            font-size: 20px;
+        }
+        .mapArea {
+            iframe{
+               // width: 635px;
+                height: 470px; 
+            }
+        }
+    }
+    .header {
+        height: 509px;
+    }
+    
+    
+    .aminitiesSection{
+       @include outer-container();
+       @include span-columns(12 of 12);
+
+ 
+    }
+    .gallerySection{
+        margin-top:0;
+    }
+    .contactSection{
+        margin-top:20px;
+    }
+    
+}
+
+/*-------------------------------------------------------------------------------------------*\
+    RESPONSIVE      min-width:1024px       ipad Landscape
+\*--------------------------------------------------------------------------------------------*/
+@media only screen and (min-width:1024px){
+    .home .header {
+        height: 307px;
+    }
+    nav ul.menu{
+        top: 340px;
+        ul{
+            display:none;
+            position: absolute;
+            //top:30px;
+            //background:#000;
+            z-index:9999;
+
+            li{
+                display:block;
+                float:none;
+                width:180px;
+                a,visited{
+                    padding: 10px 0px;
+                }
+            }
+        }
+        li{
+            float: left;
+            text-transform: uppercase;
+            //font-size:1.2em;
+            margin-top:1.6em;
+
+            a{
+               //color:#fff; 
+            }
+
+        }
+    }
+     .nav ul.menu li:hover > ul {
+        display:block;
+    }
+    .homeSection {
+        margin-top: 94px;
+        .fade-in.one {
+             margin-left: 263px;
+
+        }
+        .mapArea iframe {
+            //width: 852px;
+            height: 450px;
+        }
+    }
+    .aminitiesSectionWrapper{
+        margin-top:-108px;
+    }
+    .gallerySection{
+        margin-top: -108px;
+    }
+    .contactSection{
+        margin-top:-75px;
+    }
+    .defaultSection{
+        margin-top:-108px;
+    }
+    .page-template-default{
+        #redBox{
+            right:217px;
+        }
+    }
+}
+
+/*-------------------------------------------------------------------------------------------*\
+    RESPONSIVE      min-width:1140px
+\*--------------------------------------------------------------------------------------------*/
+@media only screen and (min-width:1140px){
+    .homeSection .fade-in.one {
+    margin-left: 345px;
+}
+}
+
+/*-------------------------------------------------------------------------------------------*\
+    RESPONSIVE      min-width:1240px
+\*--------------------------------------------------------------------------------------------*/
+@media only screen and (min-width:1240px){
+    
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}
